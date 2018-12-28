@@ -7,9 +7,10 @@ services:
     ports:
       # Expose Emoncms on localhost port 8080
       - 8080:80
-    #volumes:
-      ##mount emoncms files from local FS for dev
-      #- ./emoncms:/var/www/html
+    # volumes:
+    #   ##mount emoncms files from local FS for dev
+    #   #- ./emoncms:/var/www/html
+    #   - ./emoncms/app:/var/www/html/Modules/app
     env_file:
       # Use default enviroment variables file for dev
       - 'default.docker-env'
